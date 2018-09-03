@@ -14,7 +14,7 @@ class TaxCalculatorTest {
 	void testEmployeeInvalidException() throws Exception
 	{
 	assertThrows(EmployeeInvalidException.class,()->TaxCalculator.calculateTax("",true,30000));
-	assertThrows(EmployeeInvalidException.class,()->TaxCalculator.calculateTax("reddy",true,1000));
+	assertThrows(TaxNotEligibleException.class,()->TaxCalculator.calculateTax("reddy",true,1000));
 }}
 
 
